@@ -1,0 +1,35 @@
+---------------------OutOfMemoryErrorJavaHeapSpace -----------------------------
+
+ public class OutOfMemoryErrorJavaHeapSpace {
+    static List<String> list=new ArrayList();
+    public static void main(String[] args) {
+           while(true){
+                  list.add(new String("a"));   //Line 16
+           }
+    }
+}
+
+ Integer[] array = new Integer[10000 * 10000];  //Line 11
+ 
+ 
+ 
+    public static void main(String[] args) throws Exception {
+	 static ClassPool classPool = ClassPool.getDefault();
+           for (int i = 0; i < 100000; i++) {
+                  //makeClass method - Creates a new class (or interface) from the given class file.
+                  Class clas = classPool.makeClass(
+                               i + " outofmemory.OutOfMemoryErrorMetaspace ").toClass();
+                  //Print name of class loaded
+                  System.out.println(clas.getName());
+           }
+    }
+---------------------NoClassDefFoundError -----------------------------
+
+ public class NoClassDefFoundErrorExample {
+ public static void main(String[] args) {
+         new A(); 
+ }
+}
+ 
+class A {
+}
